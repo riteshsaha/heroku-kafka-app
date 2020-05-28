@@ -17,7 +17,7 @@ public class DemoMessage {
                        @JsonProperty("partition") int partition,
                        @JsonProperty("offset") long offset) {
 
-        this.message = message;
+        this.message = "Ritesh " + message;
         this.topic = topic;
         this.partition = partition;
         this.offset = offset;

@@ -74,7 +74,7 @@ public class DemoConsumer implements Managed {
 
         DemoMessage message = new DemoMessage(record.value(), config.getTopic(), record.partition(), record.offset());
 
-        if (queue.offer("Ritesh " + message)) {
+        if (queue.offer(message)) {
           consumer.commitSync();
         } else {
           LOG.error("Failed to track message: {}", message);
